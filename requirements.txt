@@ -1,11 +1,10 @@
 streamlit
 python-dotenv
-langchain>=0.3.0
+langchain
+langchain-classic  <-- এটি অবশ্যই যোগ করবেন
 langchain-community
 langchain-groq
 langchain-huggingface
 langchain-chroma
-langchain-core
-langchain-classic
 pypdf
 sentence-transformers
