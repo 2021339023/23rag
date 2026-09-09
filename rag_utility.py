@@ -26,7 +26,7 @@ def answer_question(query: str) -> str:
     retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
 
     # Using your provided key directly as a fallback if env is not found
-    api_key = os.getenv("GROQ_API_KEY", "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")
+    api_key = os.getenv("GROQ_API_KEY", "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")
 
     llm = ChatGroq(
         temperature=0,
