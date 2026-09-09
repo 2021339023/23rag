@@ -20,8 +20,10 @@ st.set_page_config(
 # ------------------------
 st.markdown("""
 <style>
-    .main {
-        background-color: #f5f7fb;
+    /* Force a consistent light background everywhere, regardless of the
+       viewer's Streamlit theme (fixes the black/blank bars around content) */
+    .stApp, .main, body, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
+        background-color: #f5f7fb !important;
     }
 
     .hero {
@@ -76,13 +78,35 @@ st.markdown("""
         margin-bottom: 0.5rem;
     }
 
+    .answer-box, .answer-box * {
+        color: #1A1A2E !important;
+    }
     .answer-box {
         background: #F8F5FF;
         border-left: 4px solid #8B5CF6;
         padding: 1.2rem 1.4rem;
         border-radius: 10px;
         margin-top: 0.8rem;
-        line-height: 1.6;
+        line-height: 1.7;
+        overflow-x: auto;
+    }
+    .answer-box table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 0.6rem;
+    }
+    .answer-box th, .answer-box td {
+        padding: 8px 12px;
+        border: 1px solid #DDD3F7;
+        text-align: left;
+        background: transparent;
+    }
+    .answer-box th {
+        background: #EDE7FB !important;
+        font-weight: 600;
+    }
+    .answer-box tr:nth-child(even) td {
+        background: #FBFAFF;
     }
 
     .stButton>button {
