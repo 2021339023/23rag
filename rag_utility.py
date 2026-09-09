@@ -31,7 +31,7 @@ def answer_question(query: str) -> str:
     llm = ChatGroq(
         temperature=0,
         groq_api_key=api_key,
-        model_name="llama-3.1-8b-instant"
+        model_name="openai/gpt-oss-120b"
     )
 
     system_prompt = (
